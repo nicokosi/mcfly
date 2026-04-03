@@ -6,7 +6,7 @@
 
 # McFly - fly through your shell history
 
-<img src="/docs/screenshot.png" alt="screenshot" width="400">
+<img src="./docs/screenshot.png" alt="screenshot" width="400">
 
 McFly replaces your default `ctrl-r` shell history search with an intelligent search engine that takes into account
 your working directory and the context of recently executed commands. McFly's suggestions are prioritized
@@ -159,7 +159,7 @@ When suggesting a command, McFly takes into consideration:
 
 ### Install manually from source (macOS, Linux, or Windows)
 
-1. [Install Rust 1.40 or later](https://www.rust-lang.org/tools/install)
+1. [Install Rust 1.40 or later](https://rust-lang.org/tools/install/)
 1. Run `git clone https://github.com/cantino/mcfly` and `cd mcfly`
 1. Run `cargo install --path .`
 1. Ensure `~/.cargo/bin` is in your `$PATH`.
@@ -202,7 +202,7 @@ When suggesting a command, McFly takes into consideration:
 
 To avoid McFly's UI messing up your scrollback history in iTerm2, make sure this option is unchecked:
 
-<img src="/docs/iterm2.jpeg" alt="iterm2 UI instructions">
+<img src="./docs/iterm2.jpeg" alt="iterm2 UI instructions">
 
 ## Dump history
 
@@ -227,7 +227,7 @@ mcfly dump
 ### Timestamp format
 McFly use [chrono-systemd-time-ng] parsing timestamp.
 
-**chrono-systemd-time-ng** is a non-strict implementation of [systemd.time](https://www.freedesktop.org/software/systemd/man/systemd.time.html), with the following exceptions:
+**chrono-systemd-time-ng** is a non-strict implementation of [systemd.time](https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html), with the following exceptions:
 * time units **must** accompany all time span values.
 * time zone suffixes are **not** supported.
 * weekday prefixes are **not** supported.
@@ -235,9 +235,7 @@ McFly use [chrono-systemd-time-ng] parsing timestamp.
 Users of McFly simply need to understand **specifying timezone in timestamp isn't allowed**.
 McFly will always use your **local timezone**.
 
-For more details, please refer to [the document of chrono-systemd-time-ng][chrono-systemd-time-ng].
-
-[chrono-systemd-time-ng]: https://docs.rs/chrono-systemd-time-ng/latest/chrono_systemd_time/
+For more details, please refer to [the chrono-systemd-time documentation](https://crates.io/crates/chrono-systemd-time).
 
 ### Regex
 *Dump* supports filtering commands with regex.
